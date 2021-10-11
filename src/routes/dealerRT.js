@@ -7,6 +7,6 @@ router.put("/updateDealer/:id", dealerController.dealerUpdate);
 
 router.delete("/deleteDealer/:id", dealerController.dealerDelete);
 
-// router.get("/getDealer/:id", dealerController.dealerGet);
+router.get("/getDealer/:id", dealerController.dealerGet);
 
 module.exports = router;

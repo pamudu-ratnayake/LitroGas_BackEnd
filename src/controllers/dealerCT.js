@@ -56,20 +56,20 @@ const dealerDelete = (req, res, next) => {
     });
 };
 
-// const dealerGet = (req, res, next) => {
-//     let ID = req.params.id;
+const dealerGet = (req, res, next) => {
+    let ID = req.params.id;
 
-//     const dealerInfor = dealer.findById(ID).then((dealerData) => {
-//         res.json(dealerData);
-//     }).catch((err) => {
-//         console.log(err.message);
-//         res.status(500).send({ status: "Error with get user", error: err.message});
-//     });
-// };
+    const dealerInfor = dealer.findById(ID).then((dealerData) => {
+        res.json(dealerData);
+    }).catch((err) => {
+        console.log(err.message);
+        res.status(500).send({ status: "Error with get user", error: err.message});
+    });
+};
 
 module.exports = {
     dealerPost,
     dealerUpdate,
     dealerDelete,
-    // dealerGet
+    dealerGet
 };
